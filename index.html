@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magify</title>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Welcome, to MAGIFY.</h1>
+    <p>Turn your green background to anything-anywhere-anytime</p>
+
+    <canvas id="fgcan"> </canvas>
+    <canvas id="bgcan"> </canvas>
+
+    <p>
+      Foreground:
+      <input
+        type="file"
+        multiple="false"
+        accept="image/*"
+        id="fgfile"
+        onchange="loadForegroundImage()"
+      />
+    </p>
+
+    <p>
+      Background:
+      <input
+        type="file"
+        multiple="false"
+        accept="image/*"
+        id="bgfile"
+        onchange="loadBackgroundImage()"
+      />
+    </p>
+
+    <p>
+      <input
+        type="button"
+        value="Create Composite"
+        onclick="doGreenScreen()"
+        class="button"
+      />
+      <input
+        type="button"
+        value="Clear Canvases"
+        onclick="clearCanvas()"
+        class="button"
+      />
+    </p>
+    <br />
+    <br />
+  </body>
+</html>
